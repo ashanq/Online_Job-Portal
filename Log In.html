@@ -1,0 +1,234 @@
+<?php
+
+$host="localhost";
+$user="root";
+$password="";
+$db="demo";
+
+mysql_connect($host,$user,$password);
+mysql_select_db($db);
+
+if(isset(["username"])){
+	$uname=$_POST["username"];
+	$password=$_POST["password"];
+	
+	$sql="select * from loginfrom where user='".$uname."'AND pass='"$password"' limit 2";
+	
+	$result=mysql_query($sql);
+	
+	if(mysql_num_rows($result)==2){
+		echo "You have login Successfully";
+		exit();
+	}
+	else{
+		echo "You have Enter Incorrect Password";
+		exit();
+	}
+}
+
+
+
+
+
+
+?>
+
+
+
+
+
+
+
+<!DocType html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Log In</title>
+		<link rel="stylesheet" type="text/css" href="style/login.css"> </link>
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"></link>	
+	</head>
+	<body>
+	<div id="main">
+			<nav>
+				<img src="image/logoy.jpg" width="200" height="100">
+				<ul>
+					<li><a href="Home.html">Home</a></li>
+					<li><a href="#">Find a Job</a></li>
+					<li><a href="#">Post a Job</a></li>
+					<li><a href="#">Contact Us</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="test.html">Career</a></li>
+					<li><a href="FAQ.html">FAQ</a></li>
+					<button class="myaccount" type="button">My Account</button>
+					<button class="sginup" type="button">Sgin Up</button>
+					<button class="login" type="button">Log In</button>	
+				</ul>
+			</nav>
+			<!----------------Nav end------------------>					
+		<form name="login-box">	
+		<div class="login-box">
+			<h1>Log In</h1>
+		<form method = "PSOT" action = "login.php">
+			<div class="textbox">
+				<input type="text" placeholder="Username" name="users">
+			</div>
+			<div class="textbox">
+				<input type="password" placeholder="password" name="pass">
+			</div>	
+		  <input class="btn" type="button" onclick="check(this.form)" value="Sign In">
+		  </form>
+		  <!----------------Nav end------------------------------->		
+		  <p>forgot your password? <a href="#">click here!</a></p>
+		  <p class="or">or</p>
+		  <div class="login-facebook">
+			 <a href="https://www.facebook.com/"> <i class="fa fa-facebook"></i>
+			  <span>login with facebook</span></a>
+		  </div>
+		  <div class="login-twitter">
+			  <a href="https://twitter.com/explore"><i class="fa fa-twitter"></i>
+			  <span>login with twitter</span></a>
+		  </div>
+		  <div class="login-gmail">
+			  <a href="https://support.google.com/plus/answer/1301225?co=GENIE.Platform%3DAndroid&hl=en"><i class="fa fa-google-plus"></i>
+			  <span>Google Plus</span></a>
+		  </div>
+		</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<!----------------Nav end------------------------------->		
+<div class="footer">
+			<div class="inner-footer">
+				<div class="footer-item">
+				<h3>QuickJOB</h3>
+				<p>This site is provide about job and any users can use it and it is a free we aspect provide good Service!</p>
+				<a href="https://maps.google.lk/">
+				<img src="image/Location.jpg" width="250" height="150">
+				</a>
+			</div>
+			<div class="footer-item">
+				<h2>Site Map</h2>
+				<div class="border"></div>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Find a Job</a></li>
+					<li><a href="#">Post a Job</a></li>
+					<li><a href="#">Contact Us</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Sign Up</a></li>
+					<li><a href="#">Post a Job</a></li>
+					<li><a href="#">Job Alert</a></li>
+					
+				</ul>
+			</div>
+			<div class="footer-item">
+				<h2>Get Help</h2>
+				<div class="border"></div>
+				<ul>
+					<li><a href="#">Order</a></li>
+					<li><a href="test.html">Career</a></li>
+					<li><a href="#">Refund</a></li>
+					<li><a href="FAQ.html">FAQ</a></li>
+					<li><a href="Tearm.html">Terms of Use & Privacy Policy</a></li>
+				</ul>
+				<div class="social-media">
+					<a>Follow Us</a>
+					<a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a href="https://twitter.com/explore"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					<a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					<a href="https://support.google.com/plus/answer/1301225?co=GENIE.Platform%3DAndroid&hl=en"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+				</div>	
+			</div>
+			<div class="footer-item">
+				<h2>Contact Us</h2>
+				<div class="border"></div>
+				<ul>
+					<li><a href="#">QuickJOB.lk</a></li>
+					<a href="https://maps.google.lk/">
+					<li><i class="fa fa-map-marker" aria-hidden="true"></i> No.27,Nugegoda Road,Colombo 06,Sri Lanka</li>
+					</a>
+					<a href="https://https://lecturecapture.sliit.lk/eplayer.php?id=UmxNMVdlemJIZ18yODc0/">
+					<li><i class="fa fa-phone" aria-hidden="true"></i> Ashan:(+94-772117279)</li>
+					</a>
+					<a href="https://http://www.youtube.com//">
+					<li><i class="fa fa-phone" aria-hidden="true"></i> Hotline:(+94-011599735)</li>
+					</a>
+					<a href="https://www.google.com/gmail/about/">
+					<li><i class="fa fa-envelope" aria-hidden="true"></i> info@quickjob.lk</li>
+					</a>
+				</ul>
+			</div>
+			<!--------------<div class="footer-item">
+				<h2>Main Details Us</h2>
+				<div class="border"></div>
+				<ul>
+					<li><a href="#">Order</a></li>
+					<li><a href="#">Dilivary</a></li>
+					<li><a href="#">Refund</a></li>
+					<li><a href="#">Contact Us</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Address</a></li>
+					<li><a href="#">Compony</a></li>
+					<li><a href="#">Location</a></li>
+					<li><a href="#">Payment</a></li>
+				</ul>
+			</div>--------------------------------------->
+		</div>
+		<!----------------Nav end------------------------------->		
+		<center>
+	<div class="footer-bottom">
+		Copyright © 2020 QuickJOB®. All rights reserved.
+	</div>	
+		</center>
+<script language="javascript">
+function check(form)
+	{
+		if(form.users.value = "ashan" && form.pass.value == "123")
+			{
+				window.open('https://www.youtube.com/watch?v=DDplD0MDmxw')
+			}	
+		else
+			{
+				alert("The Username and Password you Enterd dont match")
+			}
+	}
+	
+</script>		
+		</body>
+</html>
+		
